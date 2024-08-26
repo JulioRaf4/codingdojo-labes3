@@ -4,7 +4,9 @@
 
 Bem-vindo à Banese Labes Eventos! Você foi recentemente contratado como parte da equipe de desenvolvimento para criar um novo sistema de gerenciamento de eventos. Este sistema permitirá que os organizadores de eventos gerenciem palestrantes, participantes, locais, agenda, feedbacks e administradores. Seu trabalho é implementar as APIs que comporão esse sistema.
 
-### Nova Posição
+### Nova Posição 👷‍♂️👷‍♀️
+
+
 
 Você faz parte da equipe de desenvolvimento da Banese Labes Eventos, responsável por criar funcionalidades que serão utilizadas por milhares de organizadores de eventos em todo o mundo. A qualidade e eficiência do seu código irão diretamente impactar a experiência dos nossos clientes e usuários. Prepare-se para desenvolver soluções robustas e eficientes!
 
@@ -76,6 +78,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
       - Data o feedback foi dado
 
 ---
+
+> ### ⚠️ Todos modelos devem conter id autoincremental.
 
 ## Instruções para Rodar o Código
 
