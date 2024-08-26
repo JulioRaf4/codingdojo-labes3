@@ -6,8 +6,6 @@ Bem-vindo à Banese Labes Eventos! Você foi recentemente contratado como parte 
 
 ### Nova Posição 👷‍♂️👷‍♀️
 
-
-
 Você faz parte da equipe de desenvolvimento da Banese Labes Eventos, responsável por criar funcionalidades que serão utilizadas por milhares de organizadores de eventos em todo o mundo. A qualidade e eficiência do seu código irão diretamente impactar a experiência dos nossos clientes e usuários. Prepare-se para desenvolver soluções robustas e eficientes!
 
 ## Features a Serem Implementadas
