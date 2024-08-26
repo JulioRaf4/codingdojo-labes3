@@ -1,4 +1,4 @@
-# Banese Labes Eventos
+# Coding Dojo Banese Labes
 
 ## Contextualização
 
@@ -15,8 +15,13 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
 1. **Gestão de Palestrantes**
    - Criar novos palestrantes.
    - Listar palestrantes.
-   - Buscar palestrantes por ID.
+   - Buscar palestrantes por cpf.
    - Deletar palestrantes.
+
+   1.1. **Modelo palestrante**  
+      - Nome
+      - Assunto da palesta
+      - CPF
 
 2. **Gestão de Participantes**
    - Registrar novos participantes.
@@ -24,11 +29,21 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Buscar participantes por ID.
    - Deletar participantes.
 
+   2.1. **Modelo Participante**  
+      - Nome
+      - Data de nascimento
+      - CPF
+
 3. **Gestão de Locais**
    - Cadastrar novos locais para eventos.
    - Listar todos os locais cadastrados.
    - Buscar locais por ID.
    - Deletar locais.
+
+   3.1. **Modelo do local**  
+      - Nome
+      - Cidade
+      - Estado
 
 4. **Gestão da Agenda**
    - Criar novos itens na agenda do evento.
@@ -36,17 +51,20 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Buscar itens por ID.
    - Deletar itens da agenda.
 
+   4.1. **Modelo Agenda**  
+      - Data
+      - Hora
+      - Nomde do local
+
 5. **Gestão de Feedback**
    - Registrar feedbacks dos participantes.
    - Listar todos os feedbacks recebidos.
    - Buscar feedbacks por ID.
    - Deletar feedbacks.
-
-6. **Gestão de Administradores**
-   - Criar novos administradores.
-   - Listar todos os administradores.
-   - Buscar administradores por ID.
-   - Deletar administradores.
+   4.1. **Modelo FeedBack**  
+      - 
+      - 
+      - 
 
 Cada uma dessas features será implementada como uma API independente, que seguirá as melhores práticas de desenvolvimento, garantindo segurança, desempenho e escalabilidade.
 
@@ -54,16 +72,36 @@ Cada uma dessas features será implementada como uma API independente, que segui
 
 Para facilitar o desenvolvimento, este projeto foi configurado para ser executado com o gerenciador de dependências **Poetry**. Siga os passos abaixo para configurar e rodar o código de exemplo:
 
-### 1. Instalar o Poetry
+### 1. Fazer Fork do Repositório
 
-Se você ainda não tem o Poetry instalado, siga as instruções na [documentação oficial](https://python-poetry.org/docs/#installation).
+1. Vá para o repositório original no GitHub.
+2. Clique no botão "Fork" no canto superior direito da página.
+3. Isso criará uma cópia do repositório em sua conta do GitHub.
 
-### 2. Instalar Dependências
+### 2. Clonar o Repositório
+
+Depois de fazer o fork, você precisa clonar o repositório para sua máquina local.
+
+1. Abra o terminal ou o Git Bash.
+2. Navegue até o diretório onde deseja clonar o repositório.
+3. Execute o seguinte comando, substituindo `<seu-usuario>` pelo seu nome de usuário no GitHub:
+
+```bash
+git clone https://github.com/<seu-usuario>/codingdojo-labes3.git
+```
+
+### 3. Instalar Dependências
 
 Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
 
 ```bash
 poetry install
-"# codingdojo-labes3" 
-"# codingdojo-labes3" 
-# coding-dojo-labes3
+```
+
+### 4. Inicie a máquina virtual com as dependências 
+
+Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
+
+```bash
+poetry shell
+```
