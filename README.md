@@ -54,7 +54,7 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    4.1. **Modelo Agenda**  
       - Data
       - Hora
-      - Nomde do local
+      - Nome do local
 
 5. **Gestão de Feedback**
    - Registrar feedbacks dos participantes.
@@ -63,9 +63,9 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Deletar feedbacks.
      
    4.1. **Modelo FeedBack**  
-      - 
-      - 
-      - 
+      - Avaliação entre 0-10
+      - Descricao do feedback
+      - Data que o feedback foi dado
 
 Cada uma dessas features será implementada como uma API independente, que seguirá as melhores práticas de desenvolvimento, garantindo segurança, desempenho e escalabilidade.
 
