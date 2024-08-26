@@ -23,6 +23,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
       - Assunto da palesta
       - CPF
 
+---
+
 2. **Gestão de Participantes**
    - Registrar novos participantes.
    - Listar todos os participantes.
@@ -33,6 +35,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
       - Nome
       - Data de nascimento
       - CPF
+
+---
 
 3. **Gestão de Locais**
    - Cadastrar novos locais para eventos.
@@ -45,6 +49,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
       - Cidade
       - Estado
 
+---
+
 4. **Gestão da Agenda**
    - Criar novos itens na agenda do evento.
    - Listar todos os itens da agenda.
@@ -56,18 +62,20 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
       - Hora
       - Nome do local
 
+---
+
 5. **Gestão de Feedback**
    - Registrar feedbacks dos participantes.
    - Listar todos os feedbacks recebidos.
    - Buscar feedbacks por ID.
    - Deletar feedbacks.
      
-   4.1. **Modelo FeedBack**  
+   5.1. **Modelo FeedBack**  
       - Avaliação entre 0-10
       - Descricao do feedback
       - Data que o feedback foi dado
 
-Cada uma dessas features será implementada como uma API independente, que seguirá as melhores práticas de desenvolvimento, garantindo segurança, desempenho e escalabilidade.
+---
 
 ## Instruções para Rodar o Código
 
