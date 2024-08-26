@@ -6,8 +6,11 @@ from .models import Administrador, AdministradorDB
 
 route = APIRouter()
 
+
 # POST /administradores
-@route.post("/cria_administradores", response_model=Administrador, tags=["administradores"])
+@route.post(
+    "/cria_administradores", response_model=Administrador, tags=["administradores"]
+)
 def criar_administrador(admin: Administrador, db: Session = Depends(get_db)):
     # Cria um novo administrador sem passar o ID, que será gerado automaticamente
     novo_admin = AdministradorDB(nome=admin.nome, email=admin.email)
@@ -15,6 +18,7 @@ def criar_administrador(admin: Administrador, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(novo_admin)
     return novo_admin
+
 
 # GET /administradores/{admin_id}
 @route.get(
@@ -31,13 +35,17 @@ def obter_administrador(
         raise HTTPException(status_code=404, detail="Administrador não encontrado")
     return admin
 
+
 # GET /administradores
 @route.get(
-    "/lista_administradores", response_model=List[Administrador], tags=["administradores"]
+    "/lista_administradores",
+    response_model=List[Administrador],
+    tags=["administradores"],
 )
 def listar_administradores(db: Session = Depends(get_db)):
     administradores = db.query(AdministradorDB).all()
     return administradores
+
 
 # DELETE /administradores/{admin_id}
 @route.delete("/administradores/{admin_id}", tags=["administradores"])

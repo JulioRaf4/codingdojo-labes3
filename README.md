@@ -15,7 +15,7 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
 1. **Gestão de Palestrantes**
    - Criar novos palestrantes.
    - Listar palestrantes.
-   - Buscar palestrantes por cpf.
+   - Buscar palestrantes por CPF.
    - Deletar palestrantes.
 
    1.1. **Modelo palestrante**  
@@ -28,8 +28,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
 2. **Gestão de Participantes**
    - Registrar novos participantes.
    - Listar todos os participantes.
-   - Buscar participantes por ID.
-   - Deletar participantes.
+   - Buscar participantes por CPF.
+   - Deletar participantes por CPF.
 
    2.1. **Modelo Participante**  
       - Nome
@@ -41,8 +41,8 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
 3. **Gestão de Locais**
    - Cadastrar novos locais para eventos.
    - Listar todos os locais cadastrados.
-   - Buscar locais por ID.
-   - Deletar locais.
+   - Buscar local por nome.
+   - Deletar local por nome.
 
    3.1. **Modelo do local**  
       - Nome
@@ -54,13 +54,13 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
 4. **Gestão da Agenda**
    - Criar novos itens na agenda do evento.
    - Listar todos os itens da agenda.
-   - Buscar itens por ID.
-   - Deletar itens da agenda.
+   - Buscar itens por nome do gestor.
+   - Deletar itens da agenda por nome do gestor.
 
    4.1. **Modelo Agenda**  
-      - Data
-      - Hora
-      - Nome do local
+      - Nome do gestor que marcou
+      - Data e hora
+      - Repetiçãp [Diaria, semanal, mensal ...]
 
 ---
 
@@ -73,7 +73,7 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    5.1. **Modelo FeedBack**  
       - Avaliação entre 0-10
       - Descricao do feedback
-      - Data que o feedback foi dado
+      - Data o feedback foi dado
 
 ---
 
