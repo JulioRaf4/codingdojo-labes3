@@ -6,7 +6,7 @@ import uvicorn
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Projeto de Transcrição")
+app = FastAPI(title="Coding Dojo")
 
 # Adicione as novas rotas aqui
 #app.include_router(rota_exemplo, prefix="/api")

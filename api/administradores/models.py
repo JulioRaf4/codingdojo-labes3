@@ -10,9 +10,17 @@ class AdministradorDB(Base):
     nome = Column(String, index=True)
     email = Column(String, unique=True, index=True)
 
-# Modelo Pydantic para validação e conversão de dados
+# Modelo Pydantic para conversão de dados (sem ID para criação)
+class AdministradorCreate(BaseModel):
+    nome: str
+    email: str
+
+    class Config:
+        from_attributes = True
+
+# Modelo Pydantic para retorno de dados (com ID)
 class Administrador(BaseModel):
-    id: int = None  # O id será atribuído automaticamente pelo banco de dados
+    id: int
     nome: str
     email: str
 

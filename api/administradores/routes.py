@@ -2,7 +2,8 @@ from fastapi import APIRouter, HTTPException, Path, Depends
 from sqlalchemy.orm import Session
 from typing import List
 from api.database import get_db
-from .models import Administrador, AdministradorDB
+from .models import Administrador, AdministradorCreate, AdministradorDB
+
 
 route = APIRouter()
 
@@ -11,8 +12,13 @@ route = APIRouter()
 @route.post(
     "/cria_administradores", response_model=Administrador, tags=["administradores"]
 )
-def criar_administrador(admin: Administrador, db: Session = Depends(get_db)):
-    # Cria um novo administrador sem passar o ID, que será gerado automaticamente
+def criar_administrador(admin: AdministradorCreate, db: Session = Depends(get_db)):
+    # Verifica se o email já existe no banco de dados
+    db_admin = db.query(AdministradorDB).filter(AdministradorDB.email == admin.email).first()
+    if db_admin:
+        raise HTTPException(status_code=400, detail="Email já cadastrado")
+    
+    # Cria novo administrador
     novo_admin = AdministradorDB(nome=admin.nome, email=admin.email)
     db.add(novo_admin)
     db.commit()
@@ -22,7 +28,7 @@ def criar_administrador(admin: Administrador, db: Session = Depends(get_db)):
 
 # GET /administradores/{admin_id}
 @route.get(
-    "/administradores/{admin_id}",
+    "/get_administrador/{admin_id}",
     response_model=Administrador,
     tags=["administradores"],
 )
@@ -38,7 +44,7 @@ def obter_administrador(
 
 # GET /administradores
 @route.get(
-    "/lista_administradores",
+    "/get_administradores",
     response_model=List[Administrador],
     tags=["administradores"],
 )
@@ -48,7 +54,7 @@ def listar_administradores(db: Session = Depends(get_db)):
 
 
 # DELETE /administradores/{admin_id}
-@route.delete("/administradores/{admin_id}", tags=["administradores"])
+@route.delete("/delete_administradores/{admin_id}", tags=["administradores"])
 def deletar_administrador(
     admin_id: int = Path(..., title="O ID do administrador a ser deletado"),
     db: Session = Depends(get_db),
