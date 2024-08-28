@@ -58,9 +58,9 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Deletar itens da agenda por nome do gestor.
 
    4.1. **Modelo Agenda**  
-      - Nome do gestor que marcou
-      - Data e hora
-      - Repetiçãp [Diaria, semanal, mensal ...]
+      - Nome do gestor que marcou o evento.
+      - Data e hora.
+      - Repetiçãp [Diaria, semanal, mensal ...].
 
 ---
 
@@ -71,9 +71,9 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Deletar feedbacks.
      
    5.1. **Modelo FeedBack**  
-      - Avaliação entre 0-10
-      - Descricao do feedback
-      - Data o feedback foi dado
+      - Avaliação entre 0-10.
+      - Descricao do feedback.
+      - Data que feedback foi dado.
 
 ---
 
@@ -101,7 +101,14 @@ Depois de fazer o fork, você precisa clonar o repositório para sua máquina lo
 git clone https://github.com/<seu-usuario>/codingdojo-labes3.git
 ```
 
+> ### Na raiz do projeto
 ### 3. Instalar Dependências
+
+Instale o Poetry
+
+```bash
+pip install poetry
+```
 
 Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
 
@@ -115,4 +122,12 @@ Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o co
 
 ```bash
 poetry shell
+```
+
+### 5. Inicie o projeto
+
+Utilize o arquivo run.ab para iniciar o projeto.
+
+```bash
+run
 ```
