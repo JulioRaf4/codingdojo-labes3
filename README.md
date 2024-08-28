@@ -101,6 +101,7 @@ Depois de fazer o fork, você precisa clonar o repositório para sua máquina lo
 git clone https://github.com/<seu-usuario>/codingdojo-labes3.git
 ```
 
+> ### Na raiz do projeto
 ### 3. Instalar Dependências
 
 Instale o Poetry
