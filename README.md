@@ -71,9 +71,9 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Deletar feedbacks.
      
    5.1. **Modelo FeedBack**  
-      - Avaliação entre 0-10
-      - Descricao do feedback
-      - Data o feedback foi dado
+      - Avaliação entre 0-10.
+      - Descricao do feedback.
+      - Data que feedback foi dado.
 
 ---
 
