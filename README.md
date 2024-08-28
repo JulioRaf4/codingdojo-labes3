@@ -103,6 +103,12 @@ git clone https://github.com/<seu-usuario>/codingdojo-labes3.git
 
 ### 3. Instalar Dependências
 
+Instale o Poetry
+
+```bash
+pip install poetry
+```
+
 Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o comando abaixo para instalar todas as dependências necessárias:
 
 ```bash
@@ -115,4 +121,12 @@ Com o Poetry instalado, navegue até o diretório raiz do projeto e execute o co
 
 ```bash
 poetry shell
+```
+
+### 5. Inicie o projeto
+
+Utilize o arquivo run.ab para iniciar o projeto.
+
+```bash
+run
 ```
