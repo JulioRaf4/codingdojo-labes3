@@ -58,9 +58,9 @@ Durante este coding dojo, você e seu grupo serão responsáveis por implementar
    - Deletar itens da agenda por nome do gestor.
 
    4.1. **Modelo Agenda**  
-      - Nome do gestor que marcou
-      - Data e hora
-      - Repetiçãp [Diaria, semanal, mensal ...]
+      - Nome do gestor que marcou o evento.
+      - Data e hora.
+      - Repetiçãp [Diaria, semanal, mensal ...].
 
 ---
 
