@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-
+from .models import Item, Item_criar, ItemDB
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from api.database import get_db
@@ -8,16 +8,16 @@ route = APIRouter()
 
 # Criar novos itens na agenda do evento.
 
-@route.post("./cria_novos_itens", tags=["Agenda"])
-def criar_novo_item(db: Session = Depends(get_db)):
+@route.post("./cria_novos_itens", response_model=Item, tags=["Agenda"])
+def criar_novo_item(item: Item_criar, db: Session = Depends(get_db)):
 
-
-
-    db.add(...)
+    novo_item = ItemDB(nome=item.nome, data_e_hora = item.data_e_hora, repeticao = item.repeticao)
+    
+    db.add(novo_item)
     db.commit()
-    db.refresh(...)
+    db.refresh(novo_item)
 
-    return ...
+    return novo_item
 
 
 # Listar todos os itens da agenda.
