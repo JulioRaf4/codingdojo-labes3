@@ -26,3 +26,12 @@ def criar_palestrante(palestrante: PalestranteCreate, db: Session = Depends(get_
 	db.commit()
 	db.refresh(novo_palestrante)
 	return novo_palestrante
+
+@route.get(
+	"/",
+	response_model=List[Palestrante],
+	tags=["palestrantes"]	
+)
+def listar_palestrantes(db: Session = Depends(get_db)):
+	palestrantres = db.query(PalestranteDB).all()
+	return palestrantres
