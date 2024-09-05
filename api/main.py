@@ -1,4 +1,5 @@
 from api.administradores.routes import route as rota_administrador
+from api.agenda.routes import route as rota_agenda
 from api.database import Base, engine
 from fastapi import FastAPI
 import uvicorn
@@ -12,6 +13,7 @@ app = FastAPI(title="Coding Dojo")
 #app.include_router(rota_exemplo, prefix="/api")
 
 app.include_router(rota_administrador, prefix="/api")
+app.include_router(rota_agenda, prefix="/api")
 
 
 if __name__ == "__main__":
