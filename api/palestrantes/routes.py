@@ -35,3 +35,16 @@ def criar_palestrante(palestrante: PalestranteCreate, db: Session = Depends(get_
 def listar_palestrantes(db: Session = Depends(get_db)):
 	palestrantres = db.query(PalestranteDB).all()
 	return palestrantres
+
+@route.get(
+	"/{palestrante_cpf}",
+	response_model=Palestrante,
+	tags=["palestrantes"]	
+)
+def obter_palestrante_cpf(cpf: str, db: Session = Depends(get_db)):
+	if not verificar_cpf(cpf):
+		raise HTTPException(status_code=400, detail="O CPF informado é inválido. O formato aceito é composto somente por números.")
+	db_palestrante = db.query(PalestranteDB).filter(PalestranteDB.cpf == cpf).first()
+	if db_palestrante is None:
+		raise HTTPException(status_code=404, detail="Palestrante não encontrado")
+	return db_palestrante
