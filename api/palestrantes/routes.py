@@ -8,6 +8,13 @@ import re
 
 route = APIRouter()
 
+def verificar_cpf(cpf: str) -> bool:
+	match_digits = re.match("\d{11}", cpf)
+	
+	if len(cpf) == 11 and match_digits:
+		return True
+	
+	return False
 
 @route.post(
 	"/", 
