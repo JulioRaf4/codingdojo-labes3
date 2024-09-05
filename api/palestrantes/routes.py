@@ -48,3 +48,20 @@ def obter_palestrante_cpf(cpf: str, db: Session = Depends(get_db)):
 	if db_palestrante is None:
 		raise HTTPException(status_code=404, detail="Palestrante não encontrado")
 	return db_palestrante
+
+@route.delete(
+	"/{palestrante_cpf}", 
+	tags=["palestrantes"],
+)
+def deletar_palestrante(
+	cpf: str = Path(..., title="O cpf do palestrante a ser deletado"),
+	db: Session = Depends(get_db),
+):
+	if not verificar_cpf(cpf):
+		raise HTTPException(status_code=400, detail="O CPF informado é inválido. O formato aceito é composto somente por números.")
+	palestrante = db.query(PalestranteDB).filter(PalestranteDB.cpf == cpf).first()
+	if palestrante is None:
+			raise HTTPException(status_code=404, detail="Palestrante não encontrado")
+	db.delete(palestrante)
+	db.commit()
+	return {"mensagem": "Palestrante deletado com sucesso"}
