@@ -1,3 +1,5 @@
+from api.participantes.routes import route as rota_participant
+from api.participantes.database import Base, engine
 from api.database import Base, engine
 from api.administradores.routes import route as rota_administrador
 from api.feedback.routes import route as rota_feedback
@@ -8,8 +10,9 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Coding Dojo")
 
-app.include_router(rota_administrador, prefix="/api")
 
+app.include_router(rota_participant, prefix="/api")
+app.include_router(rota_administrador, prefix="/api")
 app.include_router(rota_feedback, prefix="/api_feedback")
 
 if __name__ == "__main__":
